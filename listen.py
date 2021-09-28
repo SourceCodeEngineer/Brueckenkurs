@@ -48,3 +48,8 @@ def add(point_a, point_b):
     return new_list
 
 
+#Schreiben Sie eine Funktion dist(point_a, point_b), die die Distanz zwischen zwei Punkten
+#in einem karthesischen Koordinatensystems zurückgibt.
+
+def dist(point_a, point_b):
+    return ((point_b[0]-point_a[0])*(point_b[0]-point_a[0]))+((point_b[1]-point_a[1])*(point_b[1]-point_a[1]))

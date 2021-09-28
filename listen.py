@@ -36,7 +36,19 @@ list = []
 while len(list) <= 20:
     list.append(random.randint(1,10000))
 
-#WILL BE CONTINUED!
+def sortList(array):
+    length = len(array)
+
+    for item in range(length):
+        minimum = item
+
+        for i in range(item + 1, length):
+            if array[i] < array[minimum]:
+                minimum = i
+
+        (array[item], array[minimum]) = (array[minimum], array[item])
+        
+sortList(list)
 
 #Implementieren Sie eine Funktion add(point_a, point_b), die zwei Punkte eines karthesischen
 #Koordinatensystems addiert. Es gilt [a, b] + [x, y] = [a + x, b + y].

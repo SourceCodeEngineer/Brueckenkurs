@@ -33,7 +33,7 @@ import random
 
 list = []
 
-while len(list) <= 20:
+while len(list) < 20:
     list.append(random.randint(1,10000))
 
 def sortList(array):

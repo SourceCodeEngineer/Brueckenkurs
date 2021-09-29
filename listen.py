@@ -46,7 +46,7 @@ def sortList(array):
             if array[i] < array[minimum]:
                 minimum = i
 
-        (array[item], array[minimum]) = (array[minimum], array[item])
+        (array[item], array[minimum]) = (array[minimum], array[item])   #Klammer nicht notwendig
         
 sortList(list)
 

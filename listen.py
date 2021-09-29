@@ -65,3 +65,39 @@ def add(point_a, point_b):
 
 def dist(point_a, point_b):
     return ((point_b[0]-point_a[0])*(point_b[0]-point_a[0]))+((point_b[1]-point_a[1])*(point_b[1]-point_a[1]))
+
+
+#Implementieren Sie eine binäre Uhr, die die aktuelle Uhrzeit ausgibt (siehe auch https://de.
+#wikipedia.org/wiki/Bin%C3%A4re_Uhr). Suchen Sie zuerst einen passenden Befehl, der Ihnen
+#die aktuelle Systemzeit zurückgibt. Wandeln Sie dann sowohl Stunde (0–23) als auch Minute
+#(0–59) in eine Binärzahl um. Üblicherweise verwendet man binäre LEDs, die leuchten oder eben
+#nicht. Bilden Sie dieses Verhalten nach, indem Sie ein X für leuchtend, und ein O für nicht-
+#leuchtend auf der Kommandozeile ausgeben. Beispiel:
+
+from datetime import datetime
+
+now = datetime.now()
+
+current_hour = int(now.strftime("%H"))
+current_minute = int(now.strftime("%M"))
+
+binary_hour = list(format(current_hour, "b"))
+binary_minute = list(format(current_minute, "b"))
+
+xo_hour = []
+xo_minute = []
+
+for element in binary_hour:
+    if element == "0":
+        xo_hour.append("O")
+    elif element == "1":
+        xo_hour.append("X")
+
+for element in binary_minute:
+    if element == "0":
+        xo_minute.append("O")
+    elif element == "1":
+        xo_hour.append("X")
+
+print("".join(xo_hour))
+print("".join(xo_minute))

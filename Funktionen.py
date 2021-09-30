@@ -11,10 +11,9 @@ def incr(x):
 def cmp(a, b):
     if a < b:
         return -1
-    elif a > b:
+    if a > b:
         return 1
-    else:
-        return 0
+    return 0
     
 #Implementieren Sie eine Funktion leapYear(year), die berechnet, ob es sich beim gegebenen
 #Jahr um ein Schaltjahr handelt. Geben Sie entsprechend True oder False zurück. Tipp: Ein
@@ -28,7 +27,7 @@ year = 2000
 if (year % 4) == 0:
    if (year % 100) == 0:
        if (year % 400) == 0:
-           return True
+            return True
        else:
            return False
    else:
